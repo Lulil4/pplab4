@@ -1,0 +1,25 @@
+<div>
+    <mat-card>
+        <h2>Nombre: {{this.pokemon.name}}</h2>
+        <h2>Fotos</h2>
+        <table>
+            <tr *ngFor="let foto of fotos">
+                <td>
+                    <tr><img [src]="foto"></tr>
+                </td>
+            </tr>
+        </table>
+        <h2>Habilidades: </h2>
+        <table>
+            <tr *ngFor="let habilidad of habilidades">
+                <td>
+                    {{habilidad.name}}
+                </td>
+                <td>
+                    {{habilidad.effect_entries[0].effect}}
+                </td>
+            </tr>
+        </table>
+    </mat-card>
+</div>
+<app-spinner *ngIf="esperar"></app-spinner>

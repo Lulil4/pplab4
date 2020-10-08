@@ -1,0 +1,9 @@
+table{
+    text-align: center;
+    color:rgb(2, 2, 2);
+    font-size:4vw;
+    margin-top:5vw;
+    width:95vw;
+    border: double 5vw;
+    border-image: url("../../../../assets/images/border.png") 27 round stretch;
+}

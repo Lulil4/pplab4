@@ -1,0 +1,18 @@
+<mat-form-field appearance="fill">
+    <mat-label>Cantidad de Paginas</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let page of paginas" [value]="page">
+        {{page}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+<mat-paginator [length]="1050" [pageSize]="20" (page)="onPageChange($event)">  
+</mat-paginator>
+<table>
+    <tr *ngFor="let pokemon of results">
+        <td><h2>{{pokemon.name}}</h2></td>
+        <td><button mat-raised-button color="accent" (click)="verDetalle(pokemon)">Detalle</button></td>
+    </tr>
+</table>
+<app-spinner *ngIf="esperar"></app-spinner>
